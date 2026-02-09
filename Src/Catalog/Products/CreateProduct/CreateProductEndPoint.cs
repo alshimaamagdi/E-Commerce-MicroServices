@@ -1,9 +1,5 @@
-﻿using Carter;
-using Mapster;
-using MediatR;
-using Microsoft.AspNetCore.Http;
-
-namespace Catalog.Produt.CreateProduct
+﻿
+namespace Catalog.Products.CreateProduct
 {
 
         public record createProductRequest(string name, List<string> categroy, string description, string fileName, decimal price) : IRequest<createProductResponse>;

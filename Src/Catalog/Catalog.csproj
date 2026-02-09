@@ -5,21 +5,21 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>7f655901-91d6-4408-b42c-38948724c791</UserSecretsId>
-    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Carter" Version="8.0.0" />
     <PackageReference Include="Mapster" Version="7.4.0" />
+    <PackageReference Include="Marten" Version="8.20.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Product\DeletProduct\" />
-    <Folder Include="Product\GetProductByCategory\" />
-    <Folder Include="Product\GetProducts\" />
-    <Folder Include="Product\GetProductById\" />
-    <Folder Include="Product\UpdateProducts\" />
+    <Folder Include="Products\DeletProduct\" />
+    <Folder Include="Products\GetProductByCategory\" />
+    <Folder Include="Products\UpdateProducts\" />
   </ItemGroup>
 
   <ItemGroup>

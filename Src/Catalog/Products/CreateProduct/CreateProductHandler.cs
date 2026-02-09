@@ -1,13 +1,11 @@
-﻿using BuildingBlocks.Cqrs;
-using Catalog.Data;
+﻿
 
-
-namespace Catalog.Produt.CreateProduct
+namespace Catalog.Products.CreateProduct
 {
     public record createProductCommand(string name,List<string>categroy,string description,string  fileName,decimal price):Icommand<createProductResult>;
     public record createProductResult(Guid id);
 
-    internal class CreateProductCommandHandler : ICommandHandler<createProductCommand, createProductResult>
+    internal class CreateProductCommandHandler(IDocumentSession session) : ICommandHandler<createProductCommand, createProductResult>
     {
         public async Task<createProductResult> Handle(createProductCommand request, CancellationToken cancellationToken)
         {
@@ -22,7 +20,9 @@ namespace Catalog.Produt.CreateProduct
             };
             //todo
             //save into Db
-            return new createProductResult(Guid.NewGuid());
+            session.Store(product);
+           await session.SaveChangesAsync(cancellationToken);
+            return new createProductResult(product.Id);
         }
     }
 }
