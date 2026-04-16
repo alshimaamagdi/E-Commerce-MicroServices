@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ordering.Domain.Models
 {
-    internal class Product:Aggregate<ProductId>
+    public class Product:Aggregate<ProductId>
     {
         public string Name { get; private set; } = default!;
         public decimal Price { get; private set; } = default!;

@@ -1,0 +1,2 @@
+﻿global using Ordering.Infrastructure;
+global using Ordering.Infrastructure.Data.DatabaseExtensions;

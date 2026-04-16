@@ -1,0 +1,11 @@
+﻿global using Microsoft.EntityFrameworkCore.Diagnostics;
+global using Microsoft.Extensions.DependencyInjection;
+global using Ordering.Application.Data;
+global using Ordering.Infrastructure.Data;
+global using Ordering.Infrastructure.Data.Interceptors;
+global using MediatR;
+global using Microsoft.EntityFrameworkCore;
+global using Ordering.Domain.Abstraction;
+global using Ordering.Domain.Models;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Ordering.Domain.Valueobject;
