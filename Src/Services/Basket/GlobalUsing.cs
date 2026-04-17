@@ -1,0 +1,9 @@
+﻿global using Basket.Models;
+global using Carter;
+global using Mapster;
+global using MediatR;
+global using BuildingBlocks.Cqrs;
+global using Basket.Data;
+global using FluentValidation;
+global using Basket.Dtos;
+global using MassTransit;
